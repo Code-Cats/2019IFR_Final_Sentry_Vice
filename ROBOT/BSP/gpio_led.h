@@ -4,7 +4,7 @@
 
 void LED_Init(void);
 
-#define LED1 PAout(0)
-#define LED2 PAout(5)
+#define LED1 PBout(6)
+#define LED2 PBout(7)
 
 #endif

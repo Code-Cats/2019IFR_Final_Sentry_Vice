@@ -10,7 +10,9 @@ void BSP_Init(void)
 	TIM1_Int_Init(2000-1,72-1);	//	72MHZ频率，分频720(不知道为什么频率异常，故换成了72)，100khz计数频率，计数100次为1ms,计数200次为2ms
 	//  Switch_Init();
 
-	T1_7_IN_Init();	//T1-T7输入
+	L1_2_Init();
+	ECD1_2_Init();
+	//T1_7_IN_Init();	//T1-T7输入
 	//P5_8_IN_Init();
 	EXTIX_Encoder_Init();
 }

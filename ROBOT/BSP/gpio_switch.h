@@ -25,22 +25,30 @@
 //#define PC7 PCin(7)
 
 //#define S1 PA15
-#define T1_IN PCin(6)
-#define T2_IN PCin(7)
-#define T3_IN PCin(8)
-#define T4_IN PCin(9)
-#define T5_IN PBin(4)
-#define T6_IN PBin(5)
-#define T7_IN PAin(1)
-#define T8_IN PAin(8)
+//#define T1_IN PCin(6)
+//#define T2_IN PCin(7)
+//#define T3_IN PCin(8)
+//#define T4_IN PCin(9)
+//#define T5_IN PBin(4)
+//#define T6_IN PBin(5)
+//#define T7_IN PAin(1)
+//#define T8_IN PAin(8)
 
-#define P5_IN PAin(6)
-#define P6_IN PAin(7)
-#define P7_IN PBin(0)
-#define P8_IN PBin(1)
+//#define P5_IN PAin(6)
+//#define P6_IN PAin(7)
+//#define P7_IN PBin(0)
+//#define P8_IN PBin(1)
 
+#define L1_IN PBin(8)
+#define L2_IN PBin(9)
+void L1_2_Init(void);
 
-void T1_7_IN_Init(void);	//T1-T7输入
-void P5_8_IN_Init(void);	//PWM_1-4输入
+#define ECD1_T1 PAin(1)	//CH2
+#define ECD1_T2 PAin(0)	//CH1
+#define ECD2_T1 PAin(7)	//CH2
+#define ECD2_T2 PAin(6)	//CH1
+void ECD1_2_Init(void);
+//void T1_7_IN_Init(void);	//T1-T7输入
+//void P5_8_IN_Init(void);	//PWM_1-4输入
 
 #endif
