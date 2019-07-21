@@ -52,7 +52,9 @@ void EXTIX_Encoder_Init(void)	//PA0 PA1 TIM2
 u32 test[3]={0};
 volatile s16 Encoder_Postion=40;
 
-volatile u8 trigger_flag=0;
+
+extern volatile u16 Encoder_Speed;
+extern volatile u8 Encoder_Trigger;	//1为负触发  2为正触发
 /********************************************************************
 //外部中断5服务程序
 void EXTI9_5_IRQHandler(void)	//T6
@@ -95,10 +97,12 @@ void EXTI1_IRQHandler(void)	//T7
 		if(ECD1_T2==1)	//下降沿
 		{
 			Encoder_Postion--;
+			Encoder_Trigger=1;
 		}
 		else
 		{
 			Encoder_Postion++;
+			Encoder_Trigger=2;
 		}
 	//	trigger_flag=0;
 	}
