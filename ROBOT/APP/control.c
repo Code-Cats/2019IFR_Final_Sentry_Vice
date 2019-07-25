@@ -119,7 +119,7 @@ void Control_Task(void)
 		SendData.statu=1;
 	}
 	
-	MainBoard_SendData();
+	//MainBoard_SendData();
 }
 
 

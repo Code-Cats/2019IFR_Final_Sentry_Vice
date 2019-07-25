@@ -7,6 +7,7 @@
 #include "gpio_valve.h"
 #include "delay.h"
 #include "bsp.h"
+#include "usart2_mainboard_analysis.h"
 
 extern s16 Encoder_Postion;
 
@@ -26,7 +27,8 @@ STM32F103C8T6小绿板
 	BSP_Init();	 
   while(1)	//T6_IN T7_IN
 	{
-		
+		MainBoard_SendData();
+		delay_ms(1);
 //GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);//调用GPIO重映射函数		
 //		PWM_PB4_Set(pwm_tem);
 //		PWM_PB5_Set(pwm_tem);
